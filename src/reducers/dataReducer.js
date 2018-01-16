@@ -12,4 +12,4 @@ const dataReducer = (state = {}, action) => {
     }
 };
 
-export default navigationReducer;
+export default dataReducer;
