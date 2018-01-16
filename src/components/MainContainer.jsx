@@ -1,6 +1,7 @@
 import React from 'react';
 import { fetchData } from '../actions/data';
 import { connect } from 'react-redux';
+import TitleBar from './TitleBar';
 
 
 
@@ -18,7 +19,7 @@ class MainContainer extends React.Component {
 
   render() {
     return (
-        <h1>hello world</h1>
+        <TitleBar/>
     );
   }
 }
