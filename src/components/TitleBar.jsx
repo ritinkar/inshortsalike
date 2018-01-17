@@ -6,7 +6,7 @@ class TitleBar extends React.Component {
     render() {
         return (
             <div>
-                <Header size='huge' textAlign='center'>This is an inshorts clone</Header>
+                <Header size='huge' textAlign='center'>inshorts-clone</Header>
             </div>
         );
     }

@@ -3,17 +3,20 @@ import { fetchData } from '../actions/data';
 import { connect } from 'react-redux';
 import TitleBar from './TitleBar';
 import ArticleCardGroup from './ArticleCardGroup';
+import { BrowserRouter, Route } from 'react-router-dom';
+import ArticleDetails from './ArticleDetails';
 
 
 
-class MainContainer extends React.Component {
+class Main extends React.Component {
     constructor(props) {
         super(props);
         this.props.fetchData();
     }
 
     //Since We fetch the dummy data during the first render of MainContainer 
-    //and there's nothing to modify we don't want it to re-render
+    //and there's nothing to modify we don't want it to re-render as that'll fetch 
+    //the dummy data again
     shouldComponentUpdate() {
         return false;
     }
@@ -22,7 +25,12 @@ class MainContainer extends React.Component {
         return (
             <div>
                 <TitleBar />
-                <ArticleCardGroup />
+                <BrowserRouter>
+                    <div>
+                        <Route exact path="/" component={ArticleCardGroup} />
+                        <Route exact path="/:id" component={ArticleDetails} />
+                    </div>
+                </BrowserRouter>
             </div>
         );
     }
@@ -38,5 +46,5 @@ const mapDispatchToProps = (dispatch) => {
 
 
 
-export default connect(null, mapDispatchToProps)(MainContainer);
+export default connect(null, mapDispatchToProps)(Main);
 

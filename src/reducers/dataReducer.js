@@ -14,7 +14,9 @@ const dataReducer = (state = [], action) => {
         case BOOKMARK:
             newState = state.map((article) => {
                 if (article.id === action.id) {
-                    article.isBookmarked = article.isBookmarked === 0 ? 1 : 0;
+                    return { ...article,
+                        isBookmarked: article.isBookmarked === 0 ? 1 : 0
+                    }
                 }
                 return article;
             })
@@ -22,7 +24,10 @@ const dataReducer = (state = [], action) => {
         case LIKE:
             newState = state.map((article) => {
                 if (article.id === action.id) {
-                    article.isLiked = article.isLiked === 1 ? 0 : 1;
+                    return { ...article,
+                        isLiked: article.isLiked === 1 ? 0 : 1
+                    }
+
                 }
                 return article;
             })
@@ -30,7 +35,9 @@ const dataReducer = (state = [], action) => {
         case DISLIKE:
             newState = state.map((article) => {
                 if (article.id === action.id) {
-                    article.isLiked = article.isLiked === -1 ? 0 : -1;
+                    return { ...article,
+                        isLiked: article.isLiked === -1 ? 0 : -1
+                    }
                 }
                 return article;
             })
