@@ -7,7 +7,6 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import ArticleDetails from './ArticleDetails';
 
 
-
 class Main extends React.Component {
     constructor(props) {
         super(props);

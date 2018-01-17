@@ -5,6 +5,14 @@ import { connect } from 'react-redux';
 
 class BookmarkButton extends React.Component {
 
+    //Prevent default behaviour of clicking on this icon
+    //since this item may be inside a anchor tag like the card in the home page
+    handleClick(e) {
+        e.preventDefault();
+        this.props.onClick(this.props.id);
+    }
+
+
     render() {
         let icon = null;
         if (this.props.isBookmarked === 1) {
@@ -14,7 +22,7 @@ class BookmarkButton extends React.Component {
             icon = <FontAwesome name='bookmark' />
         }
         return (
-            <div style={{ flex: 1, textAlign: 'center' }} onClick={() => this.props.onClick(this.props.id)}>
+            <div style={{ flex: 1, textAlign: 'center' }} onClick={(e) => this.handleClick(e)}>
                 {icon}
             </div>
         )

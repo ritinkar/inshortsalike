@@ -29,13 +29,21 @@ export default {
             "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit vehicula elit, suscipit tincidunt mi pretium sit amet. Aenean luctus erat ac condimentum rhoncus. Donec ornare ornare velit, vel pretium lacus sagittis in. Curabitur tempor consequat mauris non faucibus. Duis suscipit diam ante, in dictum tellus tristique sed. Aliquam elit erat, tristique nec ornare nec, porta eu mauris. Curabitur ut ipsum blandit, molestie nibh nec, cursus risus. Pellentesque ut turpis mollis, posuere felis nec, venenatis erat.",
             "Image": "https://i.imgur.com/49Md6RK.jpg",
             "isLiked": 0,
-            "isBookmarked": 1
+            "isBookmarked": 0
         },
         {
             "id": 5,
             "Title": "Tokyo",
             "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit vehicula elit, suscipit tincidunt mi pretium sit amet. Aenean luctus erat ac condimentum rhoncus. Donec ornare ornare velit, vel pretium lacus sagittis in. Curabitur tempor consequat mauris non faucibus. Duis suscipit diam ante, in dictum tellus tristique sed. Aliquam elit erat, tristique nec ornare nec, porta eu mauris. Curabitur ut ipsum blandit, molestie nibh nec, cursus risus. Pellentesque ut turpis mollis, posuere felis nec, venenatis erat.",
             "Image": "https://i.imgur.com/g33IKI5.jpg",
+            "isLiked": 0,
+            "isBookmarked": 0
+        },
+        {
+            "id": 6,
+            "Title": "Dubai",
+            "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit vehicula elit, suscipit tincidunt mi pretium sit amet. Aenean luctus erat ac condimentum rhoncus. Donec ornare ornare velit, vel pretium lacus sagittis in. Curabitur tempor consequat mauris non faucibus. Duis suscipit diam ante, in dictum tellus tristique sed. Aliquam elit erat, tristique nec ornare nec, porta eu mauris. Curabitur ut ipsum blandit, molestie nibh nec, cursus risus. Pellentesque ut turpis mollis, posuere felis nec, venenatis erat.",
+            "Image": "https://i.imgur.com/JSDqCZe.jpg",
             "isLiked": 0,
             "isBookmarked": 0
         }
