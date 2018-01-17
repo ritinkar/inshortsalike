@@ -2,7 +2,7 @@ import React from 'react';
 import { fetchData } from '../actions/data';
 import { connect } from 'react-redux';
 import TitleBar from './TitleBar';
-import ArticleCard from './ArticleCard';
+import ArticleCardGroup from './ArticleCardGroup';
 
 
 
@@ -22,7 +22,7 @@ class MainContainer extends React.Component {
         return (
             <div>
                 <TitleBar />
-                <ArticleCard />
+                <ArticleCardGroup />
             </div>
         );
     }

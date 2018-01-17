@@ -2,19 +2,19 @@ import React from 'react';
 import { Card, Image } from 'semantic-ui-react';
 import ActionBar from './ActionBar';
 
-const ArticleCard = () => (
+const ArticleCard = (props) => (
   <Card>
-    <Image src='https://i.imgur.com/Or1Oe6B.jpg' />
+    <Image style={{ height: 250, objectFit: 'cover' }} src={props.Image} />
     <Card.Content>
       <Card.Header>
-        Matthew
+        {props.Title}
       </Card.Header>
       <Card.Description>
-        Matthew is a musician living in Nashville.
+        {props.Description.substring(0,255)}
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <ActionBar/>  
+      <ActionBar />
     </Card.Content>
   </Card>
 )
