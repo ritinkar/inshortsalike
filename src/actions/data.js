@@ -1,4 +1,9 @@
-import { FETCH_DATA , BOOKMARK} from '../constants/ActionTypes';
+import {
+    FETCH_DATA,
+    BOOKMARK,
+    LIKE,
+    DISLIKE
+} from '../constants/ActionTypes';
 
 export function fetchData() {
     return {
@@ -6,9 +11,23 @@ export function fetchData() {
     }
 }
 
-export function bookmark(id){
-    return{
+export function bookmark(id) {
+    return {
         type: BOOKMARK,
+        id
+    }
+}
+
+export function like(id) {
+    return {
+        type: LIKE,
+        id
+    }
+}
+
+export function dislike(id) {
+    return {
+        type: DISLIKE,
         id
     }
 }

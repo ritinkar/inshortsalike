@@ -1,17 +1,36 @@
 import dummy from '../dummy';
 import {
     FETCH_DATA,
-    BOOKMARK
+    BOOKMARK,
+    LIKE,
+    DISLIKE
 } from '../constants/ActionTypes';
 
 const dataReducer = (state = [], action) => {
+    let newState = []
     switch (action.type) {
         case FETCH_DATA:
             return dummy.data;
         case BOOKMARK:
-            let newState = state.map((article) => {
+            newState = state.map((article) => {
                 if (article.id === action.id) {
                     article.isBookmarked = article.isBookmarked === 0 ? 1 : 0;
+                }
+                return article;
+            })
+            return newState;
+        case LIKE:
+            newState = state.map((article) => {
+                if (article.id === action.id) {
+                    article.isLiked = article.isLiked === 1 ? 0 : 1;
+                }
+                return article;
+            })
+            return newState;
+        case DISLIKE:
+            newState = state.map((article) => {
+                if (article.id === action.id) {
+                    article.isLiked = article.isLiked === -1 ? 0 : -1;
                 }
                 return article;
             })

@@ -8,8 +8,8 @@ class ActionBar extends React.Component {
     render() {
         return (
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <LikeButton />
-                <DislikeButton />
+                <LikeButton id={this.props.id} isLiked={this.props.isLiked}/>
+                <DislikeButton id={this.props.id} isLiked={this.props.isLiked}/>
                 <BookmarkButton id={this.props.id} isBookmarked={this.props.isBookmarked} />
             </div>)
     }
