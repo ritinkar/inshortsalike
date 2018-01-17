@@ -7,7 +7,7 @@ import { Card } from 'semantic-ui-react'
 class ArticleCardGroup extends React.Component {
     render() {
         return (
-            <Card.Group textAlign='center'>
+            <Card.Group textAlign='center' style={{justifyContent:'space-around'}}>
                 {this.props.data.map((article) =>
                     <ArticleCard key={article.id}
                         Image={article.Image}

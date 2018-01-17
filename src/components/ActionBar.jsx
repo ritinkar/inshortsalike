@@ -10,7 +10,7 @@ class ActionBar extends React.Component {
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <LikeButton />
                 <DislikeButton />
-                <BookmarkButton />
+                <BookmarkButton id={this.props.id} isBookmarked={this.props.isBookmarked} />
             </div>)
     }
 }

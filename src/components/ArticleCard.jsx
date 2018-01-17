@@ -14,7 +14,7 @@ const ArticleCard = (props) => (
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <ActionBar />
+      <ActionBar id={props.id} isBookmarked={props.isBookmarked} isLiked={props.isLiked}/>
     </Card.Content>
   </Card>
 )

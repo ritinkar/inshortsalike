@@ -1,14 +1,40 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
+import { bookmark } from '../actions/data';
+import { connect } from 'react-redux';
 
 class BookmarkButton extends React.Component {
+
     render() {
+        let icon = null;
+        if (this.props.isBookmarked === 1) {
+            icon = <FontAwesome name='bookmark' style={styles.active} />
+        }
+        else {
+            icon = <FontAwesome name='bookmark' />
+        }
         return (
-            <div style={{ flex: 1, textAlign: 'center' }}>
-                <FontAwesome name='bookmark-o' />
+            <div style={{ flex: 1, textAlign: 'center' }} onClick={() => this.props.onClick(this.props.id)}>
+                {icon}
             </div>
         )
     }
 }
 
-export default BookmarkButton;
+const styles = {
+    active: {
+        color: 'red'
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onClick: (id) => {
+            dispatch(bookmark(id))
+        }
+    }
+}
+
+
+
+export default connect(null, mapDispatchToProps)(BookmarkButton);
