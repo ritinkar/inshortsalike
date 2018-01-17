@@ -1,12 +1,15 @@
 import React from 'react';
-import { Image, Header } from 'semantic-ui-react';
+import { Image, Header, Button, Divider } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import ActionBar from './ActionBar';
+import { Link } from 'react-router-dom';
 
 class ArticleDetails extends React.Component {
     render() {
         return (
             <div style={styles.container}>
+                <Button content='Go Back' style={styles.button} as={Link} to='/' />
+                <Divider />
                 <Image src={this.props.article.Image} style={styles.image} />
                 <Header size='huge' textAlign='center'>{this.props.article.Title}</Header>
                 <ActionBar id={this.props.article.id} isBookmarked={this.props.article.isBookmarked} isLiked={this.props.article.isLiked} />
@@ -44,6 +47,10 @@ const styles = {
     },
     description: {
         margin: '10%'
+    },
+    button: {
+        margin: 'auto',
+        display: 'block'
     }
 }
 
