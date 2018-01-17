@@ -34,8 +34,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const styles = {
     container: {
-        margin: '10%'
-
+        marginLeft: '10%',
+        marginRight: '10%'
     },
     image: {
         width: 450,
@@ -46,10 +46,12 @@ const styles = {
         display: 'block'
     },
     description: {
-        margin: '10%'
+        margin: '10%',
+
     },
     button: {
-        margin: 'auto',
+        marginLeft: 'auto',
+        marginRight: 'auto',
         display: 'block'
     }
 }
