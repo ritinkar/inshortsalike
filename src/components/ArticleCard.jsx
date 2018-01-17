@@ -1,5 +1,6 @@
-import React from 'react'
-import { Card, Icon, Image } from 'semantic-ui-react'
+import React from 'react';
+import { Card, Image } from 'semantic-ui-react';
+import ActionBar from './ActionBar';
 
 const ArticleCard = () => (
   <Card>
@@ -13,10 +14,7 @@ const ArticleCard = () => (
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
+      <ActionBar/>  
     </Card.Content>
   </Card>
 )
